@@ -1,0 +1,32 @@
+<view class="home">
+  <!-- 广告轮播位置估计用不到代码先注释掉 -->
+  <!-- <view class="page-section page-section-spacing swiper">
+    <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="swiper-item {{item}}">123123123123</view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view> -->
+  <!-- 主要内容   列表导航分别有一下功能
+1.头像加口罩
+2.头像加v字
+3.头像加姓
+4.头像加文字
+5.头像加圣诞帽
+6.头像加国旗
+-->
+  <view class='header-nav'>
+    <view wx:for="{{navList}}" wx:key="key" class="list-item">
+      <view class="list-item-img">
+        <image src="{{item.imgurl}}"></image>
+      </view>
+      <view class="list-item-txt">
+        <text>{{item.title}}</text>
+        <text>{{item.mes}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>
