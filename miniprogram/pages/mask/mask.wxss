@@ -1,0 +1,27 @@
+page{
+  background: #333333;
+}
+.img-box{
+  width:300rpx;
+  height:300rpx;
+  margin:0 auto;
+  margin-top:30rpx;
+}
+.img-box image{
+  width: 100%;
+  height:100%;
+}
+.icon-img{
+  margin:40rpx 40rpx;
+  display: flex;
+}
+.item-icon{
+  width:400rpx;
+  height:150rpx;
+  background: #ffffff;
+  margin-right:20rpx;
+}
+.item-icon image{
+  width:100rpx;
+  height:100rpx;
+}

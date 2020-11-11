@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/mask/mask",
     "pages/home/home",
     "pages/index/index",
     "pages/userConsole/userConsole",

@@ -18,7 +18,7 @@
 6.头像加国旗
 -->
   <view class='header-nav'>
-    <view wx:for="{{navList}}" wx:key="key" class="list-item">
+    <view wx:for="{{navList}}" wx:key="key" class="list-item" bindtap="btnclick">
       <view class="list-item-img">
         <image src="{{item.imgurl}}"></image>
       </view>
