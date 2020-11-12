@@ -20,7 +20,7 @@
     "backgroundColor": "#ff7575",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#66B3FF",
-    "navigationBarTitleText": "头像加图标",
+    "navigationBarTitleText": "头像美化",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

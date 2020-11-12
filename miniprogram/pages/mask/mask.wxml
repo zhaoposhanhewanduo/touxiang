@@ -4,10 +4,33 @@
     <!-- canvas画板部分 -->
     <view class="img-box">
       <!-- <image class="img-box-i" src="{{avatarPath}}"></image> -->
-      <canvas canvas-id="myCanvas"></canvas>
+      <canvas canvas-id="myCanvas" class="myCanvas"></canvas>
+      <!-- --------------图片拖拽----------------- -->
+      <view class='contentWarp'>
+        <!-- *************操作区域*************  -->
+        <block wx:for="{{itemList}}" wx:key="{{item.id}}">
+          <!-- 圆心坐标 <text style='position:absolute;top:{{item.y}}px;left:{{item.x}}px;width:2px;height:2px;background-color:yellow;z-index:500'></text> -->
+          <view class='touchWrap'
+            style='transform: scale({{item.scale}});top:{{item.top}}px;left:{{item.left}}px; z-index:{{item.active?100:1}}'>
+            <view class='imgWrap {{item.active? "touchActive":""}}'
+              style="transform: rotate({{item.angle}}deg); border: {{item.active?4*item.oScale:0}}rpx #fff dashed;">
+              <image class="imgWrap-img" src='{{item.image}}' data-id='{{item.id}}' style=''
+                bindtouchstart='WraptouchStart' bindtouchmove='WraptouchMove' bindtouchend='WraptouchEnd'></image>
+              <image class='x' src='../../images/x.png'
+                style='transform: scale({{item.oScale}});transform-origin:center;' data-id='{{item.id}}'
+                bindtap='deleteItem'></image>
+              <image class='o' src='../../images/o.png'
+                style='transform: scale({{item.oScale}});transform-origin:center;' data-id='{{item.id}}'
+                bindtouchstart='oTouchStart' bindtouchmove='oTouchMove' bindtouchend='WraptouchEnd'>
+              </image>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- --------------------图片拖拽结束---------------- -->
     </view>
-    <!-- 按钮开关部分圆形还是方形 -->
-    <view>
+    <!-- 按钮开关部分圆形还是方形边框线 -->
+    <view class="line">
 
     </view>
     <!-- 选择图片列表 -->
@@ -19,7 +42,24 @@
         </view>
       </view>
     </scroll-view>
-
-
   </view>
+  <!-- 按钮功能选择图片保存图片 -->
+  <view class="btn">
+    <button class="mini-btn" type="default" size="default">选择图片</button>
+    <button class="mini-btn" type="warn" size="default">保存</button>
+  </view>
+
+  <!-- bug点：一定不要用if hidden 隐藏canvas会导致很多api调用bug -->
+  <!-- <canvas class='maskCanvas' canvas-id="maskCanvas"
+    style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas> -->
+
+
+
+
+
+
+
+
+
+  <!-- ------------------------------- -->
 </view>
