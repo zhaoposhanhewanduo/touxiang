@@ -13,11 +13,12 @@ Page({
     autoplay: false,
     interval: 2000,
     duration: 500,
-    navList: [{
-        "title": "头像加口罩",
-        "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/kouzhan/avatar_mask.png',
-        "mes": "冬天再次来临，带上口罩保护自己，不给祖国添麻烦！"
-      },
+    navList: [
+      // {
+      //   "title": "头像加口罩",
+      //   "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/kouzhan/avatar_mask.png',
+      //   "mes": "冬天再次来临，带上口罩保护自己，不给祖国添麻烦！"
+      // },
       {
         "title": "头像加V",
         "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/v/v5.png',
@@ -30,11 +31,12 @@ Page({
       },
       {
         "title": "定制情侣头像一键制作",
+        "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/qinglv.png',
         "mes": "制作专属情侣头像，保证独一无二"
       },
       {
         "title": "头像加口号",
-        "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/喇叭.png',
+        "imgurl": 'cloud://kaifa-9gh6z1r846d2dcd4.6b61-kaifa-9gh6z1r846d2dcd4-1304172747/laba.png',
         "mes": "每天满满正能量"
       },
       {
@@ -58,9 +60,8 @@ Page({
   },
   // 点击列表跳转到详情操作页面
   btnclick: function () {
-    console.log('1111111111111')
     wx.navigateTo({
-      url: '../mask/mask'
+      url: '../photo/photo'
     })
   },
   changeIndicatorDots() {

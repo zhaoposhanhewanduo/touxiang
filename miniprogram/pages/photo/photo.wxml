@@ -1,0 +1,42 @@
+<view>
+  <!-- 头像添加口罩 -->
+  <view class='head-make'>
+    <!-- canvas画板部分 -->
+    <view class="img-box">
+      <!-- <image class="img-box-i" src="{{avatarPath}}"></image> -->
+      <canvas canvas-id="myCanvas" class="myCanvas"></canvas>
+    </view>
+    <!-- 按钮开关部分圆形还是方形边框线 -->
+    <view class="line">
+
+    </view>
+    <!-- 选择图片列表 -->
+
+    <scroll-view scroll-x='true'>
+      <view class="icon-img">
+        <view class="item-icon" wx:for="{{iconUrl}}" wx:key="key">
+          <image src="{{item.url}}"></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 按钮功能选择图片保存图片 -->
+  <view class="btn">
+    <button class="mini-btn" type="default" size="default">选择图片</button>
+    <button class="mini-btn" type="warn" size="default">保存</button>
+  </view>
+
+  <!-- bug点：一定不要用if hidden 隐藏canvas会导致很多api调用bug -->
+  <!-- <canvas class='maskCanvas' canvas-id="maskCanvas"
+    style='width:{{canvasWidth}}px; height:{{canvasHeight}}px;'></canvas> -->
+
+
+
+
+
+
+
+
+
+  <!-- ------------------------------- -->
+</view>
