@@ -1,0 +1,75 @@
+<view class="container data-v-78974771" style="{{'height:'+(windowHeight+'px')+';'}}">
+	<image class="page-bg data-v-78974771" style="{{'height:'+(windowHeight+'px')+';'}}" mode="aspectFill"
+		src="/static/image/page-bg.png"></image>
+	<block wx:if="{{SHOW_TIP}}">
+		<view class="data-v-78974771"></view>
+	</block>
+	<view class="avatar-container grid justify-center data-v-78974771" id="avatar-container"
+		data-event-opts="{{[['touchstart',[['touchStart',['$event']]]],['touchend',[['touchEnd',['$event']]]],['touchmove',[['touchMove',['$event']]]]]}}"
+		bindtouchstart="__e" bindtouchend="__e" bindtouchmove="__e">
+		<view class="avatar-bg-border data-v-78974771">
+			<image class="bg avatar-bg data-v-78974771" id="avatar-bg" src="{{avatarPath}}"
+				data-event-opts="{{[['touchstart',[['touchAvatarBg',['$event']]]]]}}" bindtouchstart="__e"></image>
+		</view>
+		<block wx:if="{{currentMaskId>-1}}">
+			<image class="{{['mask flip-horizontal data-v-78974771',(showBorder)?'maskWithBorder':'']}}"
+				style="{{'top:'+(maskCenterY-maskSize/2-2+'px')+';'+('left:'+(maskCenterX-maskSize/2-2+'px')+';')+('transform:'+('rotate('+rotate+'deg)'+'scale('+scale+')'+'rotateY('+rotateY+'deg)')+';')}}"
+				id="mask" src="{{maskPic}}"></image>
+		</block><text class="{{['cuIcon-full handle circle data-v-78974771',(!showBorder)?'hideHandle':'']}}"
+			style="{{'top:'+(handleCenterY-10+'px')+';'+('left:'+(handleCenterX-10+'px')+';')}}" id="handle"></text>
+		<block wx:if="{{isAndroid}}"><text
+				class="{{['cuIcon-order cancel circle data-v-78974771',(!showBorder)?'hideHandle':'']}}"
+				style="{{'top:'+(cancelCenterY-10+'px')+';'+('left:'+(cancelCenterX-10+'px')+';')+('transform:'+('rotate('+90+'deg)')+';')}}"
+				id="cancel" data-event-opts="{{[['tap',[['flipHorizontal',['$event']]]]]}}" bindtap="__e"></text></block>
+	</view>
+	<view class="data-v-78974771"><canvas class="cans-id-mask data-v-78974771"
+			style="height:270px;width:270px;margin-left:auto;margin-right:auto;" canvas-id="cans-id-mask"></canvas></view>
+	<view class="flex-sub text-center data-v-78974771">
+		<view class="solid-bottom data-v-78974771"><text class="text-yellow text-bold data-v-78974771">戴上口罩 远离病毒
+				从你我做起</text></view>
+	</view>
+	<view class="grid justify-around action-wrapper data-v-78974771">
+		<view class="grid col-1 data-v-78974771"><button class="cu-btn round action-btn bg-yellow shadow  data-v-78974771"
+				id="btn-my-avatar" open-type="getUserInfo"
+				data-event-opts="{{[['getuserinfo',[['getUserInfoCallBack',['$event']]]]]}}" bindgetuserinfo="__e">我的头像</button>
+		</view>
+		<view class="grid col-2 data-v-78974771"><button class="cu-btn round action-btn bg-yellow shadow data-v-78974771"
+				id="btn-save" data-event-opts="{{[['tap',[['draw',['$event']]]]]}}" bindtap="__e">保存</button></view>
+		<view class="grid col-3 data-v-78974771"><button class="cu-btn round action-btn bg-yellow shadow data-v-78974771"
+				id="btn-choose-img" data-event-opts="{{[['tap',[['chooseImage',['$event']]]]]}}" bindtap="__e">选择图片</button>
+		</view>
+	</view>
+	<view class="grid justify-around share-wrapper data-v-78974771">
+		<ad unit-id="adunit-85230d6cd9a1beee" class="data-v-78974771"></ad>
+	</view>
+	<scroll-view class="scrollView mask-scroll-view data-v-78974771" scroll-x="true">
+		<block wx:for="{{imgList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+			<view style="display:inline-flex;" class="data-v-78974771">
+				<block wx:if="{{currentMaskId==index&&isAndroid}}"><text class="cuIcon-order cancel circle data-v-78974771"
+						style="{{'transform:'+('rotate('+90+'deg)')+';'}}" id="cancel"
+						data-event-opts="{{[['tap',[['flipHorizontal',['$event']]]]]}}" bindtap="__e"></text></block>
+				<image class="imgList data-v-78974771" src="{{'/static/image/mask/'+index+'.png'}}" data-mask-id="{{index}}"
+					data-event-opts="{{[['tap',[['changeMask',['$event']]]]]}}" bindtap="__e"></image>
+			</view>
+		</block>
+	</scroll-view>
+	<view class="{{['cu-modal data-v-78974771',modalName=='saveTip'?'show':'']}}">
+		<view class="cu-dialog data-v-78974771">
+			<view class="cu-bar bg-white justify-end data-v-78974771">
+				<view class="content data-v-78974771">已保存至相册</view>
+				<view data-event-opts="{{[['tap',[['hideModal',['$event']]]]]}}" class="action data-v-78974771" bindtap="__e">
+					<text class="cuIcon-close text-red data-v-78974771"></text></view>
+			</view>
+			<view class="padding-xl data-v-78974771">预防千万条，口罩第一条。
+				健康第一位，不要吃野味。
+				不往人群挤，病毒不找你。
+				洗手很重要，胜过吃补药。
+				通风也要紧，疾病无踪影。</view>
+			<view class="padding data-v-78974771">祝大家平安过节！戴口罩，勤洗手，早睡早起，健康美丽！</view>
+			<view class="cu-bar bg-white justify-end data-v-78974771">
+				<view class="action data-v-78974771"><button data-event-opts="{{[['tap',[['hideModal',['$event']]]]]}}"
+						class="cu-btn line-green text-green data-v-78974771" bindtap="__e">我知道了</button></view>
+			</view>
+		</view>
+	</view>
+</view>

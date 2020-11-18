@@ -1,0 +1,8 @@
+{
+  "disableScroll": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-icon": "/components/tui/icon",
+    "add-tips": "/components/add-tips"
+  }
+}

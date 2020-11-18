@@ -1,0 +1,8 @@
+{
+  "disableScroll": true,
+  "navigationBarTitleText": " 保存成功",
+  "usingComponents": {
+    "tui-footer": "/components/tui/footer",
+    "add-tips": "/components/add-tips"
+  }
+}

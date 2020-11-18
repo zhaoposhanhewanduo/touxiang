@@ -1,0 +1,8 @@
+{
+  "disableScroll": true,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tui-footer": "/components/tui/footer",
+    "add-tips": "/components/add-tips"
+  }
+}

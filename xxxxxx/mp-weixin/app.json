@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mask/add-mask",
+    "pages/mask/save-done",
+    "pages/slogan/add-slogan",
+    "pages/about/about",
+    "pages/crop/crop",
+    "pages/text/add-text"
+  ],
+  "subPackages": [
+    {
+      "root": "page-chat-bg",
+      "pages": [
+        "pages/index/index",
+        "pages/download/download"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "戴口罩，促防疫",
+    "navigationBarBackgroundColor": "#FFF",
+    "backgroundColor": "#C12928"
+  },
+  "tabBar": {
+    "selectedColor": "#C12928",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/tabbar/home-off.png",
+        "selectedIconPath": "static/image/tabbar/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mask/add-mask",
+        "iconPath": "static/image/tabbar/mask-off.png",
+        "selectedIconPath": "static/image/tabbar/mask-on.png",
+        "text": "戴口罩"
+      },
+      {
+        "pagePath": "pages/slogan/add-slogan",
+        "iconPath": "static/image/tabbar/fight-off.png",
+        "selectedIconPath": "static/image/tabbar/fight-on.png",
+        "text": "加口号"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "static/image/tabbar/发现-off.png",
+        "selectedIconPath": "static/image/tabbar/发现-on.png",
+        "text": "更多好玩"
+      }
+    ]
+  },
+  "preloadRule": {
+    "page-chat-bg/pages/index/index": {
+      "network": "all",
+      "packages": [
+        "__APP__"
+      ]
+    },
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "page-chat-bg"
+      ]
+    }
+  },
+  "plugins": {
+    "tucao": {
+      "version": "1.1.5",
+      "provider": "wx8abaf00ee8c3202e"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxb8055d6d942b3690",
+    "wx1656b2e5df4e587c",
+    "wxd44e78294c5c5401"
+  ],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+{
+  "disableScroll": true,
+  "navigationBarTitleText": "头像加字",
+  "usingComponents": {
+    "tui-footer": "/components/tui/footer",
+    "tui-fab": "/components/tui/tui-fab",
+    "add-tips": "/components/add-tips"
+  }
+}

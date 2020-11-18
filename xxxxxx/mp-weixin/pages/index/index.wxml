@@ -1,0 +1,141 @@
+<scroll-view class="container container-index data-v-70804827" style="overflow-y:scroll;">
+  <block wx:if="{{SHOW_TIP}}">
+  <!-- 广告模块 -->
+    <!-- <view class="data-v-70804827">
+      <add-tips vue-id="8dd740cc-1" statusBarHeight="{{statusBarHeight}}" class="data-v-70804827" bind:__l="__l">
+      </add-tips>
+    </view> -->
+  </block>
+  <view class="menu-list data-v-70804827" style="{{'margin-top:'+(statusBarHeight+40+'px')+';'}}">
+    <!-- <view class="ad-container margin-top cu-list menu sm-border card-menu data-v-70804827">
+      <ad unit-id="adunit-28338c7d91d145af" class="data-v-70804827"></ad>
+    </view> -->
+    <view data-event-opts="{{[['tap',[['addMask',['$event']]]]]}}" class="cu-card article data-v-70804827"
+      bindtap="__e">
+      <view class="cu-item shadow data-v-70804827" style="margin:30rpx 30rpx 0rpx 30rpx;">
+        <view class="title data-v-70804827">
+          <view class="text-cut data-v-70804827">头像戴口罩</view>
+        </view>
+        <view class="content data-v-70804827">
+          <image style="width:180rpx;" src="/static/image/logo/mask-logo.png" mode="aspectFill" class="data-v-70804827">
+          </image>
+          <view class="desc data-v-70804827">
+            <view class="text-content data-v-70804827">换上口罩头像，防止疫情蔓延。 超过30款口罩、护目镜任你选！</view>
+            <view class="data-v-70804827">
+              <view class="grid justify-between data-v-70804827">
+                <view class="data-v-70804827">
+                  <view class="cu-tag bg-red light sm round data-v-70804827">防疫情，保健康</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view data-event-opts="{{[['tap',[['nasa',['$event']]]]]}}" class="cu-card article data-v-70804827" bindtap="__e">
+      <view class="cu-item shadow data-v-70804827" style="margin:30rpx 30rpx 0rpx 30rpx;">
+        <view class="title data-v-70804827">
+          <view class="text-cut data-v-70804827">生日那天的宇宙</view>
+        </view>
+        <view class="content data-v-70804827">
+          <image style="width:180rpx;" src="/static/image/logo/nasa.jpeg" mode="aspectFill" class="data-v-70804827">
+          </image>
+          <view class="desc data-v-70804827">
+            <view class="text-content data-v-70804827">快来看看你生日那天，哈勃望远镜看到了怎样的宇宙星空！</view>
+            <view class="data-v-70804827">
+              <view class="grid justify-between data-v-70804827">
+                <view class="data-v-70804827">
+                  <view class="cu-tag bg-red light sm round data-v-70804827">全宇宙独一无二的生日礼物</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view data-event-opts="{{[['tap',[['addSlogan',['$event']]]]]}}" class="cu-card article data-v-70804827"
+      bindtap="__e">
+      <view class="cu-item shadow data-v-70804827" style="margin:30rpx 30rpx 0rpx 30rpx;">
+        <view class="title data-v-70804827">
+          <view class="text-cut data-v-70804827">武汉加油</view>
+        </view>
+        <view class="content data-v-70804827">
+          <image style="width:180rpx;" src="/static/image/logo/slogan-logo.jpeg" mode="aspectFill"
+            class="data-v-70804827"></image>
+          <view class="desc data-v-70804827">
+            <view class="text-content data-v-70804827">武汉加油，中国加油，加油2020，不动如山，拒绝聚会，拒绝野味。</view>
+            <view class="data-v-70804827">
+              <view class="grid justify-between data-v-70804827">
+                <view class="data-v-70804827">
+                  <view class="cu-tag bg-red light sm round data-v-70804827">武汉加油、自定义口号</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view data-event-opts="{{[['tap',[['addText',['$event']]]]]}}" class="cu-card article data-v-70804827"
+      bindtap="__e">
+      <view class="cu-item shadow data-v-70804827" style="margin:30rpx 30rpx 0rpx 30rpx;">
+        <view class="title data-v-70804827">
+          <view class="text-cut data-v-70804827">头像加字</view>
+        </view>
+        <view class="content data-v-70804827">
+          <image style="width:180rpx;" src="/static/image/logo/text-logo.jpeg" mode="aspectFill"
+            class="data-v-70804827"></image>
+          <view class="desc data-v-70804827">
+            <view class="text-content data-v-70804827">头像一键加字，加V字，制作姓氏头像，让你在朋友圈脱颖而出。</view>
+            <view class="data-v-70804827">
+              <view class="grid justify-between data-v-70804827">
+                <view class="data-v-70804827">
+                  <view class="cu-tag bg-red light sm round data-v-70804827">任意文字、颜色</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view data-event-opts="{{[['tap',[['chatBackground',['$event']]]]]}}" class="cu-card article data-v-70804827"
+      bindtap="__e">
+      <view class="cu-item shadow data-v-70804827" style="margin:30rpx 30rpx 0rpx 30rpx;">
+        <view class="title data-v-70804827">
+          <view class="text-cut data-v-70804827">聊天背景图、壁纸锁屏</view>
+        </view>
+        <view class="content data-v-70804827">
+          <image style="width:180rpx;" src="/static/image/logo/chat-bg-logo.png" mode="aspectFill"
+            class="data-v-70804827"></image>
+          <view class="desc data-v-70804827">
+            <view class="text-content data-v-70804827">聊天背景图，高清手机壁纸，锁屏图片</view>
+            <view class="data-v-70804827">
+              <view class="grid justify-between data-v-70804827">
+                <view class="data-v-70804827">
+                  <view class="cu-tag bg-red light sm round data-v-70804827">聊天背景、壁纸、锁屏</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view
+      class="about-actions margin-top cu-list menu sm-border card-menu animation-shake animation-speed-2 animation-delay-3 data-v-70804827">
+      <view class="cu-item arrow feedback-btn data-v-70804827">
+        <view class="content data-v-70804827"><button class="free-btn-bordernone data-v-70804827" open-type="contact">
+            <tui-icon vue-id="8dd740cc-2" name="kefu" color="green" size="{{20}}" class="data-v-70804827"
+              bind:__l="__l"></tui-icon><text class="text-sm data-v-70804827"
+              style="color:grey;padding-left:10px;">联系客服</text>
+          </button></view>
+      </view>
+      <view data-event-opts="{{[['tap',[['tucao',['$event']]]]]}}" class="cu-item arrow feedback-btn data-v-70804827"
+        bindtap="__e">
+        <view class="content data-v-70804827"><button class="free-btn-bordernone data-v-70804827">
+            <tui-icon vue-id="8dd740cc-3" name="message" color="green" size="{{20}}" class="data-v-70804827"
+              bind:__l="__l"></tui-icon><text class="text-sm data-v-70804827"
+              style="color:grey;padding-left:10px;">产品建议</text>
+          </button></view>
+      </view>
+    </view> -->
+  </view>
+</scroll-view>
